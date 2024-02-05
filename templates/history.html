@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    YT-downloader
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Channel</th>
+                <th>File Size</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbdody>
+            {% for video in downloads %}
+            <tr>
+                <td>{{ video["title"] }}</td>
+                <td>{{ video["channel"] }}</td>
+                <td>{{ video["size"] }} MB</td>
+                <td>{{ video["time"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbdody>
+    </table>
+{% endblock %}

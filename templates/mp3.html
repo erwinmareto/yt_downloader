@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    YouTube to MP3
+{% endblock %}
+
+{% block main %}
+        <div id="mp3-download">
+            <h1 class="text-center">Convert YouTube videos into MP3!</h1>
+            <h3 class="text-center">Paste the YouTube link to the bar down below</h3>
+            <form class="download-form" action="/mp3" method="post">
+              <input type="text" id="yt-link" name="yt-link" class="form-control form-control-lg link-form" placeholder="Youtube link here">
+
+
+                <button class="btn btn-lg btn-outline-secondary down-btn btn-padding" type="submit">Download</button>
+
+            </form>
+        </div>
+
+        <section class="white-section" id="features">
+
+            <div class="container-fluid">
+              <div class="container">
+
+                <div class="row">
+                  <div class="feature-box col-lg-4 col-md-12">
+                    <i class="icon fa-solid fa-circle-check"></i>
+                    <h3 class="feature-title">Easy to use.</h3>
+                    <p>So easy to use, all you have to do is copy the youtube video link to the search bar and press the convert button after that just choose the format you want.</p>
+                  </div>
+                  <div class="feature-box col-lg-4 col-md-12">
+                    <i class="icon fa-solid fa-stopwatch"></i>
+                    <h3 class="feature-title">Download mp3 quickly</h3>
+                    <p>Allows you to download Youtube video quickly in a few simple steps with high quality or low quality</p>
+                  </div>
+                  <div class="feature-box col-lg-4 col-md-12">
+                    <i class="icon fa-solid fa-music"></i>
+                    <h3 class="feature-title">Unlimited downloads</h3>
+                    <p>You can download unlimited amount of videos as long as the video is available</p>
+                </div>
+              </div>
+              </div>
+            </div>
+        </section>
+{% endblock%}
+
